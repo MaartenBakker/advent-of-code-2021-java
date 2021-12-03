@@ -5,6 +5,7 @@ import java.util.List;
 public class Part2 {
     public static void main(String[] args) {
         List<Integer> inputData = InputData.getData();
+
         int count = 0;
 
         for (int i = 1; i < inputData.size() - 2; i++) {
