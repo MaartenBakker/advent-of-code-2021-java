@@ -1,10 +1,10 @@
-package day2;
+package com.maartenmusic.day2;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class InputData {
-    private static final String data = """
+    private static final String DATA = """
             forward 6
             forward 9
             down 9
@@ -1007,6 +1007,8 @@ public class InputData {
             forward 5""";
 
     public static List<String> getData() {
-        return Arrays.asList(data.split("\n"));
+        return Arrays.asList(DATA.split("\n"));
     }
+
+    private InputData(){}
 }

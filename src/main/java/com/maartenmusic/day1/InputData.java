@@ -1,11 +1,10 @@
-package day1;
+package com.maartenmusic.day1;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class InputData {
-    private static final String data = """
+    private static final String DATA = """
             162
             164
             165
@@ -2010,8 +2009,10 @@ public class InputData {
 
     public static List<Integer> getData() {
         return Arrays
-                .stream(data.split("\n"))
+                .stream(DATA.split("\n"))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
+                .toList();
     }
+
+    private InputData() {}
 }

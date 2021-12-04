@@ -1,4 +1,4 @@
-package day3;
+package com.maartenmusic.day3;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,22 +14,23 @@ public class Part1 {
         List<String> data = InputData.getData();
         int binSize = data.get(0).length();
 
-        for (String s : data)
-        for (int i = 0; i < binSize; i++) {
-            if (s.charAt(i) == '0') {
-                updateZeros(i);
-            } else {
-                updateOnes(i);
+        for (String s : data) {
+            for (int i = 0; i < binSize; i++) {
+                if (s.charAt(i) == '0') {
+                    updateZeros(i);
+                } else {
+                    updateOnes(i);
+                }
             }
-        }
 
-        for (int i = 0; i < binSize; i++) {
-            if (zeros.get(i) > ones.get(i)) {
-                gammaRate += "0";
-                epsilonRate += "1";
-            } else {
-                gammaRate += "1";
-                epsilonRate += "0";
+            for (int i = 0; i < binSize; i++) {
+                if (zeros.get(i) > ones.get(i)) {
+                    gammaRate += "0";
+                    epsilonRate += "1";
+                } else {
+                    gammaRate += "1";
+                    epsilonRate += "0";
+                }
             }
         }
 

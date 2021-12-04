@@ -1,15 +1,12 @@
-package day4;
+package com.maartenmusic.day4;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class InputData {
-    private static final String numbers = """
-            15,61,32,33,87,17,56,73,27,83,0,18,43,8,86,37,40,6,93,25,14,68,64,57,39,46,55,13,21,72,51,81,78,79,52,65,36,92,97,28,9,24,22,69,70,42,3,4,63,50,91,16,41,94,77,85,49,12,76,67,11,62,99,54,95,1,74,34,88,89,82,48,84,98,58,44,5,53,7,19,29,30,35,26,31,10,60,59,80,71,45,38,20,66,47,2,23,96,90,75""";
+    private static final String NUMBERS = "15,61,32,33,87,17,56,73,27,83,0,18,43,8,86,37,40,6,93,25,14,68,64,57,39,46,55,13,21,72,51,81,78,79,52,65,36,92,97,28,9,24,22,69,70,42,3,4,63,50,91,16,41,94,77,85,49,12,76,67,11,62,99,54,95,1,74,34,88,89,82,48,84,98,58,44,5,53,7,19,29,30,35,26,31,10,60,59,80,71,45,38,20,66,47,2,23,96,90,75";
 
-    private static final String cards = """
+    private static final String CARDS = """
             26 68  3 95 59
             40 88 50 22 48
             75 67  8 64  6
@@ -611,10 +608,9 @@ public class InputData {
             40 80 47 12 17""";
 
 
-    private static final String testNumbers = """
-            7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1""";
+    private static final String TEST_NUMBERS = "7,4,9,5,11,17,23,2,0,14,21,24,10,16,13,6,15,25,12,22,18,20,8,19,3,26,1";
 
-    private static final String testCards = """
+    private static final String TEST_CARDS = """
             22 13 17 11  0
              8  2 23  4 24
             21  9 14 16  7
@@ -634,22 +630,24 @@ public class InputData {
              2  0 12  3  7""";
 
     public static List<Integer> getNumbers() {
-        return Arrays.stream(numbers.split(","))
+        return Arrays.stream(NUMBERS.split(","))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public static List<Integer> getTestNumbers() {
-        return Arrays.stream(testNumbers.split(","))
+        return Arrays.stream(TEST_NUMBERS.split(","))
                 .map(Integer::parseInt)
-                .collect(Collectors.toList());
+                .toList();
     }
 
     public static List<String> getCards() {
-        return Arrays.stream(cards.split("\\n\\n")).toList();
+        return Arrays.stream(CARDS.split("\\n\\n")).toList();
     }
 
     public static List<String> getTestCards() {
-        return Arrays.stream(testCards.split("\\n\\n")).toList();
+        return Arrays.stream(TEST_CARDS.split("\\n\\n")).toList();
     }
+
+    private InputData() {}
 }

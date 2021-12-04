@@ -1,4 +1,4 @@
-package day1;
+package com.maartenmusic.day1;
 
 import java.util.List;
 

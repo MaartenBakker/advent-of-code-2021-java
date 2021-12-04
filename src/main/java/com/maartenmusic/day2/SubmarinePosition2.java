@@ -1,4 +1,4 @@
-package day2;
+package com.maartenmusic.day2;
 
 public class SubmarinePosition2 extends SubmarinePosition{
     private final int aim;

@@ -1,4 +1,4 @@
-package day4;
+package com.maartenmusic.day4;
 
 public class BingoNumber {
     private final int number;

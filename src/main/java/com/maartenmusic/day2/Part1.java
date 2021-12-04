@@ -1,12 +1,12 @@
-package day2;
+package com.maartenmusic.day2;
 
 import java.util.List;
 
-public class Part2 {
+public class Part1 {
     public static void main(String[] args) {
         List<String> data = InputData.getData();
 
-        SubmarinePosition2 position = new SubmarinePosition2(0,0, 0);
+        SubmarinePosition position = new SubmarinePosition(0,0);
 
         for (String s: data) {
             position = position.move(new SubmarineCommand(s));

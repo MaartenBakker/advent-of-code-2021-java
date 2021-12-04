@@ -1,11 +1,11 @@
-package day3;
+package com.maartenmusic.day3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class InputData {
-    private static final String data = """
+    private static final String DATA = """
             011111101011
             101001110000
             010010001011
@@ -1007,7 +1007,7 @@ public class InputData {
             001111110000
             100000011011""";
 
-    private static final String testData = """
+    private static final String TEST_DATA = """
             00100
             11110
             10110
@@ -1022,10 +1022,12 @@ public class InputData {
             01010""";
 
     public static List<String> getData() {
-        return new ArrayList<>(Arrays.asList(data.split("\n")));
+        return new ArrayList<>(Arrays.asList(DATA.split("\n")));
     }
 
     public static List<String> getTestData() {
-        return new ArrayList<>(Arrays.asList(testData.split("\n")));
+        return new ArrayList<>(Arrays.asList(TEST_DATA.split("\n")));
     }
+
+    private InputData() {}
 }

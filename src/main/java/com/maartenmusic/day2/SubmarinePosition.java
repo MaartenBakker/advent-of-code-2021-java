@@ -1,4 +1,4 @@
-package day2;
+package com.maartenmusic.day2;
 
 public class SubmarinePosition {
     final int horizontalPos;

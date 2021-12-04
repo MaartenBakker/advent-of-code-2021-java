@@ -1,9 +1,7 @@
-package day3;
+package com.maartenmusic.day3;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Part2 {
     private static List<String> zeros;

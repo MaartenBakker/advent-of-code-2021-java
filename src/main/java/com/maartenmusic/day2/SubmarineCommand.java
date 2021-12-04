@@ -1,4 +1,4 @@
-package day2;
+package com.maartenmusic.day2;
 
 import java.util.HashMap;
 import java.util.Map;
