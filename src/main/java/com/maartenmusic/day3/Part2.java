@@ -4,14 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Part2 {
-    private static List<String> zeros;
-    private static List<String> ones;
-    private static String oxygen = "";
-    private static String scrubber = "";
 
     public static void main(String[] args) {
         List<String> data = InputData.getData();
         int i = 0;
+
+        List<String> zeros;
+        List<String> ones;
 
         while(data.size() > 1) {
             zeros = new ArrayList<>();
@@ -33,7 +32,8 @@ public class Part2 {
             i++;
         }
 
-        System.out.println(oxygen = data.get(0));
+        String oxygen = data.get(0);
+        System.out.println(oxygen);
 
         data = InputData.getData();
         i = 0;
@@ -58,7 +58,8 @@ public class Part2 {
             i++;
         }
 
-        System.out.println(scrubber = data.get(0));
+        String scrubber = data.get(0);
+        System.out.println(data.get(0));
 
         System.out.println(Integer.parseInt(oxygen, 2) * Integer.parseInt(scrubber, 2));
     }
