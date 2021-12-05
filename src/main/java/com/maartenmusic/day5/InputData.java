@@ -525,4 +525,6 @@ public class InputData {
     public static List<String> getData() {
         return Arrays.asList(DATA.split("\n"));
     }
+
+    private InputData() {}
 }

@@ -15,9 +15,9 @@ public class Line {
         pointB = new Point(Integer.parseInt(splitInput[1].split(",")[0]), Integer.parseInt(splitInput[1].split(",")[1]));
 
         //check horizontal or vertical
-        if (pointA.getX() == pointB.getX()) {
+        if (pointA.x() == pointB.x()) {
             createVerticalLine();
-        } else if (pointA.getY() == pointB.getY()) {
+        } else if (pointA.y() == pointB.y()) {
             createHorizontalLine();
         // comment out for part 1
         } else {
@@ -31,30 +31,30 @@ public class Line {
 
     private void createVerticalLine() {
         //check pos or neg
-        int startY = Math.min(pointA.getY(), pointB.getY());
-        int endY = startY == pointA.getY() ? pointB.getY() : pointA.getY();
+        int startY = Math.min(pointA.y(), pointB.y());
+        int endY = startY == pointA.y() ? pointB.y() : pointA.y();
 
         for (int i = startY; i <= endY; i++) {
-            points.add(new Point(pointA.getX(), i));
+            points.add(new Point(pointA.x(), i));
         }
     }
 
     private void createHorizontalLine() {
         //check pos or neg
-        int startX = Math.min(pointA.getX(), pointB.getX());
-        int endX = startX == pointA.getX() ? pointB.getX() : pointA.getX();
+        int startX = Math.min(pointA.x(), pointB.x());
+        int endX = startX == pointA.x() ? pointB.x() : pointA.x();
 
         for (int i = startX; i <= endX ; i++) {
-            points.add(new Point(i, pointA.getY()));
+            points.add(new Point(i, pointA.y()));
         }
     }
 
     private void createDiagonalLine() {
         //force left to right, choose between up and down
-        int startX = Math.min(pointA.getX(), pointB.getX());
-        int endX = startX == pointA.getX() ? pointB.getX() : pointA.getX();
-        int startY = startX == pointA.getX() ? pointA.getY() : pointB.getY();
-        int endY = startY == pointA.getY()? pointB.getY() : pointA.getY();
+        int startX = Math.min(pointA.x(), pointB.x());
+        int endX = startX == pointA.x() ? pointB.x() : pointA.x();
+        int startY = startX == pointA.x() ? pointA.y() : pointB.y();
+        int endY = startY == pointA.y()? pointB.y() : pointA.y();
 
         boolean up = startY < endY;
 
