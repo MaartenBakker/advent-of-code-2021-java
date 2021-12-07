@@ -8,29 +8,33 @@ public class Part1 {
     private static final Map<Integer, Long> school = new HashMap<>();
 
     public static void main(String[] args) {
-        for (int i = 0; i <= 8; i++) {
-            school.put(i, 0L);
-        }
-
         List<Integer> data = InputData.getData();
 
+        long[] school = new long[10];
+
         for (int i : data) {
-            school.put(i, school.get(i)+1L);
+            school[i] = school[i]+1L;
         }
 
         for (int i = 0; i < 80; i++) {
-            long temp = school.get(0);
-            school.put(0, school.get(1));
-            school.put(1, school.get(2));
-            school.put(2, school.get(3));
-            school.put(3, school.get(4));
-            school.put(4, school.get(5));
-            school.put(5, school.get(6));
-            school.put(6, school.get(7) + temp);
-            school.put(7, school.get(8));
-            school.put(8, temp);
+            school[9] = school[0];
+            school[0] = school[1];
+            school[1] = school[2];
+            school[2] = school[3];
+            school[3] = school[4];
+            school[4] = school[5];
+            school[5] = school[6];
+            school[6] = school[7] + school[9];
+            school[7] = school[8];
+            school[8] = school[9];
         }
 
-        System.out.println(school.values().stream().reduce(Long::sum));
+        long total = 0L;
+
+        for (int i = 0; i < school.length-1; i++) {
+            total += school[i];
+        }
+
+        System.out.println(total);
     }
 }
